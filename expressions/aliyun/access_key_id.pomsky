@@ -1,0 +1,10 @@
+test {
+    match "LTAI5tHxUseHgKZVuzJA6m4N";
+    match in "\"LTAI5tHxUseHgKZVuzJA6m4N\"";
+    reject "ltai5tHxUseHgKZVuzJA6m4N";
+}
+
+<:(
+    "LTAI"
+    [ascii_alnum]{20}
+)>
