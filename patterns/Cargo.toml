@@ -1,0 +1,18 @@
+[package]
+name = "redpatterns"
+version = "0.1.0"
+edition = "2021"
+description = "a list of patterns for scanners 📟"
+authors = ["Red Cloud 🔴"]
+readme = "../README.md"
+license-file = "../LICENSE"
+repository = "https://github.com/redcloudvg/patterns.git"
+documentation = "https://docs.rs/redpatterns"
+categories = ["text-processing"]
+keywords = ["regex", "pomsky", "secrets"]
+
+[build-dependencies]
+pomsky = "0.11.0"
+
+[badges]
+maintenance = { status = "actively-developed" }

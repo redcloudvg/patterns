@@ -1,0 +1,13 @@
+test {
+    match 'AKIAXJKKN74EG733NUVK';
+    match 'ASIAZ4QTA4CVIMNB5EP5';
+    match in '"AKIAXJKKN74EG733NUVK"';
+    reject 'akiaxjkkn74eg733nuvk';
+}
+
+disable unicode;
+
+<:(
+    ("A3T" [ascii_upper digit] | "AKIA" | "AGPA" | "AROA" | "AIPA" | "ANPA" | "ANVA" | "ASIA")
+    [ascii_upper digit]{16}
+)>

@@ -1,0 +1,35 @@
+# Accepts emails from public email providers
+# And rejects emails with domains without or with invalid tlds
+
+test {
+  match 'test@domain.tld';
+  match in '"test@domain.tld"';
+
+  reject 'private@local.x';
+  reject 'private@localhost';
+  reject 'private@localhost';
+
+  reject 'literal@"domain.tld"';
+  reject '"literal"@domain.tld';
+  reject '"literal"@"domain.tld"';
+
+  reject '.invalid@domain.tld';
+  reject 'invalid..email@domain.tld';
+  reject '@invalid.tld';
+  reject 'invalid@';
+}
+
+disable unicode;
+
+let name = [ascii_lower digit];
+let domain = [ascii_lower digit];
+
+<:(
+(name+ '.')*
+name+
+'@'
+(domain+ ('.' | '-'))*
+domain+
+'.'
+domain{2,10}
+)>

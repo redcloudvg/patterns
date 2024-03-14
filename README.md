@@ -1,13 +1,13 @@
 # patterns
 
-a list of static patterns used for scanning
+a list of pre-compiled [pomsky](https://pomsky-lang.org/) expressions for use in scanners
 
 ## Clouds
 
 ### AWS
 
-- [ ] Access Key ID 
-- [ ] Secret Access Key
+- [x] Access Key ID 
+- [x] Secret Access Key
 - [ ] Session Token
 
 ### Aliyun
