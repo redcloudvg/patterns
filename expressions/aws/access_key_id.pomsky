@@ -8,6 +8,6 @@ test {
 disable unicode;
 
 <:(
-    ("A3T" [ascii_upper digit] | "AKIA" | "AGPA" | "AROA" | "AIPA" | "ANPA" | "ANVA" | "ASIA")
-    [ascii_upper digit]{16}
+("A3T" [ascii_upper digit] | "AKIA" | "AGPA" | "AROA" | "AIPA" | "ANPA" | "ANVA" | "ASIA")
+[ascii_upper digit]{16}
 )>
