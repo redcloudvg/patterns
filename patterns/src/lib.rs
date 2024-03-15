@@ -2,11 +2,11 @@
 
 #![no_std]
 
-mod gen;
+include!(concat!(env!("OUT_DIR"), "/patterns.rs"));
 
 /// Retrieve the compiled patterns for use with `regex` crate
 pub fn patterns() -> &'static [(&'static str, &'static str)] {
-    gen::PATTERNS
+    PATTERNS
 }
 
 #[cfg(test)]

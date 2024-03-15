@@ -6,6 +6,7 @@ use std::fs;
 use std::io;
 use std::io::Write;
 use std::os::unix::ffi::OsStrExt;
+use std::path::Path;
 
 // <manifest.rs
 // pub const PATTERNS: &'static [(&'static str, &'static str); 2] = &[
@@ -18,9 +19,20 @@ use std::os::unix::ffi::OsStrExt;
 // pub fn patterns() -> Vec<(&'static str, &'static str)> { manifest::PATTERNS }
 
 fn main() -> io::Result<()> {
-    println!("cargo:rerun-if-changed=./expressions");
+    let manifest = std::env::var("CARGO_MANIFEST_DIR").unwrap();
+    let out = std::env::var("OUT_DIR").unwrap();
 
-    let mut dst = fs::File::create("src/gen.rs")?;
+    let expressions_path = Path::new(&manifest).join("src").join("expressions");
+    println!(
+        "cargo:rerun-if-changed={}",
+        expressions_path.to_string_lossy()
+    );
+
+    for (key, value) in std::env::vars() {
+        eprintln!("{} {}", key, value);
+    }
+
+    let mut dst = fs::File::create(Path::new(&out).join("patterns.rs"))?;
     let pomsky_options = CompileOptions {
         flavor: pomsky::options::RegexFlavor::Rust,
         ..Default::default()
@@ -28,7 +40,7 @@ fn main() -> io::Result<()> {
 
     dst.write_all(b"pub const PATTERNS: &'static [(&'static str, &'static str)] = &[\n")?;
 
-    for cat_ent in fs::read_dir("../expressions")? {
+    for cat_ent in fs::read_dir(expressions_path)? {
         let cat_ent = cat_ent?;
 
         for expr_ent in fs::read_dir(cat_ent.path())? {
