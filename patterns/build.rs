@@ -18,6 +18,8 @@ use std::os::unix::ffi::OsStrExt;
 // pub fn patterns() -> Vec<(&'static str, &'static str)> { manifest::PATTERNS }
 
 fn main() -> io::Result<()> {
+    println!("cargo:rerun-if-changed=../expressions");
+
     let mut dst = fs::File::create("src/gen.rs")?;
     let pomsky_options = CompileOptions {
         flavor: pomsky::options::RegexFlavor::Rust,
