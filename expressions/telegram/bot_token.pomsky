@@ -1,0 +1,14 @@
+test {
+    match in '"6839231381:AAERno9ejhYN_Hs2JV8DTiomoLQAVsmU6ZQ"';
+    match in '"64413321:AAE_5vQnWiwdz_-O3BCrw117IDCXbWFuTN4"';
+    match in '"6518327242:AAF1hVMg22NRPUGTAu-8i9tVJfJCASBuvV"';
+    reject ':AAF1hVMg22NRPUGTAu-8i9tVJfJCASBuvV';
+    reject 'x:AAF1hVMg22NRPUGTAu-8i9tVJfJCASBuvV';
+    reject '123:BAF1hVMg22NRPUGTAu-8i9tVJfJCASBuvV';
+}
+
+<:(
+    [digit]+
+    ":AA"
+    [ascii_alnum "_" "-"]{32,33}
+)>
