@@ -1,0 +1,13 @@
+test {
+    match "https://hooks.slack.com/services/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";
+    match "https://www.hooks.slack.com/services/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";
+}
+
+:(
+    "https://"
+    "www."?
+    "hooks.slack.com/services/"
+    "T" [ascii_upper digit]{8,10} "/" # Team ID
+    "B" [ascii_upper digit]{8,10} "/"
+    [ascii_word]{24}
+)
