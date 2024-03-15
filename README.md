@@ -1,4 +1,4 @@
-# patterns
+![patterns](docs/logo.jpg)
 
 [![License](https://img.shields.io/badge/license-GNU_GPLv3-blue.svg?style=for-the-badge)](https://choosealicense.com/licenses/gpl-3.0/)
 [![Cargo](https://img.shields.io/crates/v/redpatterns.svg?style=for-the-badge&logo=rust)](https://crates.io/crates/redpatterns)
