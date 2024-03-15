@@ -1,0 +1,13 @@
+test {
+    match "https://hooks.zapier.com/hooks/catch/18252956/30c5oc5/";
+    match "https://hooks.zapier.com/hooks/catch/18252956/30c5oc5/silent/";
+    match "https://www.hooks.zapier.com/hooks/catch/18252956/30c5oc5/";
+    match "https://www.hooks.zapier.com/hooks/catch/18252956/30c5oc5/silent/";
+}
+
+:(
+    "https://" "www."? "hooks.zapier.com/hooks/catch/"
+    [digit]{,8} "/"
+    [ascii_lower digit]{7} "/"
+    "silent/"?
+)
