@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Slack Bot Token
 - Slack Webhook
 - Zapier Webhook
 

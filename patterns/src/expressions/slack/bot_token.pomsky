@@ -1,0 +1,12 @@
+test {
+    match "xoxb-6809641704083-6812280878996-UxbkLiXSaDAQ8ADj9z20bQsr";
+}
+
+<:(
+    "xoxb-"
+    [digit]{13}
+    "-"
+    [digit]{13}
+    "-"
+    [ascii_alnum]{24}
+)>
