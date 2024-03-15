@@ -1,5 +1,7 @@
 //! Provides many pre-compiled pomsky expressions for use in scanners.
 
+#![no_std]
+
 mod gen;
 
 /// Retrieve the compiled patterns for use with `regex` crate
