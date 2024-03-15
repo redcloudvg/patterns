@@ -1,0 +1,20 @@
+test {
+    match "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";
+    match "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";
+    match "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";
+    match "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";
+    match in '"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"';
+    match in '"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"';
+    reject 'SX.vAtALFx5TFakpXhcpMma4A.d_dKqk3nbv6kCbKJDLKEG5BFg_J097Lm_ecAjdFS4SI';
+    reject 'XG.vAtALFx5TFakpXhcpMma4A.d_dKqk3nbv6kCbKJDLKEG5BFg_J097Lm_ecAjdFS4SI';
+    reject 'SGX.vAtALFx5TFakpXhcpMma4A.d_dKqk3nbv6kCbKJDLKEG5BFg_J097Lm_ecAjdFS4SI';
+    reject 'XSG.vAtALFx5TFakpXhcpMma4A.d_dKqk3nbv6kCbKJDLKEG5BFg_J097Lm_ecAjdFS4SI';
+    reject 'sg.vAtALFx5TFakpXhcpMma4A.d_dKqk3nbv6kCbKJDLKEG5BFg_J097Lm_ecAjdFS4SI';
+}
+
+<:(
+    "SG."
+    [ascii_alnum "_" "-"]{22}
+    "."
+    [ascii_alnum "_" "-"]{43}
+)>
