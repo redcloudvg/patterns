@@ -9,12 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Squareup Sandbox Application ID
-- Squareup Production Application ID
+- Squareup Production/Sandbox Application ID
 - Squareup OAuth Production/Sandbox Application secret
 - Squareup Credentials Access Token
-- Squareup Credentials Sandbox Application ID
-- Squareup Credentials Production Application ID
 - Slack Bot Token
 - Slack Webhook
 - Zapier Webhook

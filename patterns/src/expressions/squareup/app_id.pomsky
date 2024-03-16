@@ -1,9 +1,11 @@
 test {
+    match "sq0idp-areGmC1n-SYzIYql9TTmJw";
+    match "sq0idp-2FLg9YdXi5DYfnm3nxUAxA";
     match "sandbox-sq0idb-k-LzmA8oDAWONo6ongWBBA";
     match "sandbox-sq0idb-FejpRw8yPpyZZAAIRHsl6g";
 }
 
 <:(
-    "sandbox-sq0idb-"
+    ("sandbox-sq0idb-" | "sq0idp-")
     [ascii_word "-"]{22}
 )>
