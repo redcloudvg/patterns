@@ -1,9 +1,0 @@
-test {
-    match "sandbox-sq0idb-FejpRw8yPpyZZAAIRHsl6g";
-    match "sandbox-sq0idb-k-LzmA8oDAWONo6ongWBBA";
-}
-
-<:(
-    "sandbox-sq0idb-"
-    [ascii_word "-"]{22}
-)>
