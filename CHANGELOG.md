@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Squareup OAuth Production Application ID
 - Squareup Credentials Access Token
 - Squareup Credentials Sandbox Application ID
 - Squareup Credentials Production Application ID

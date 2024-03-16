@@ -1,0 +1,9 @@
+test {
+    match "sq0idp-2FLg9YdXi5DYfnm3nxUAxA";
+    match "sq0idp-areGmC1n-SYzIYql9TTmJw";
+}
+
+<:(
+    "sq0idp-"
+    [ascii_word "-"]{22}
+)>
