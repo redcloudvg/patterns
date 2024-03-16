@@ -11,8 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Squareup Sandbox Application ID
 - Squareup Production Application ID
-- Squareup OAuth Sandbox Application secret
-- Squareup OAuth Production Application secret
+- Squareup OAuth Production/Sandbox Application secret
 - Squareup Credentials Access Token
 - Squareup Credentials Sandbox Application ID
 - Squareup Credentials Production Application ID
