@@ -1,0 +1,16 @@
+test {
+    # sandbox
+    match "EAAAl3biItDAmfkvZ9S_Ng8KuoRqOsXeoa1VYGsVeJPOQ9a7cxXv4iNkCK3-AE8J";
+    match "EAAAl9C5Rog0N_gXnn5kLyg9LnFOv58g4QtI6knViSO64mPkO6KCqIGv82QY8znI";
+    match "EAAAlzAbMREyJvoURbH2scY60wVgaYttaOiLXuZsWvwWVKQ0p1Tv017JpFH20TvQ";
+
+    # prod
+    match "EAAAlmaUPkKw4HbErdL8jD-zCy-44OD1bEOeJh95Df6AnWBbmCZbFIeXC4FxWxzQ";
+    match "EAAAlnFaxA6wRmioIjGAtXAU2AP4IsT6leebOKmg6XUmAcpwPbXaP27A2CKdPcHa";
+    match "EAAAligPpSJju9YgCPgLjwEG8OD0BBzcxCUrRDJXL-8ylNCVYnI_WJVUQMD4mvsj";
+}
+
+<:(
+    "EAAA"
+    [ascii_word "-"]{60}
+)>
